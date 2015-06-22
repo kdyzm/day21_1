@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="gbk"?>
+<Context docBase="E:\\MyEclipseWorkSpace\\day21_1\\WebRoot">
+	<Manager className="org.apache.catalina.session.PersistentManager" saveOnRestart="true">
+		<Store className="org.apache.catalina.session.FileStore" directory="d:/a">
+		</Store>
+	</Manager>
+</Context>
+
+<!-- 
+maxActiveSessions:设置此应用最多可以有多少个会话，如果超过这个数量的设置将会抛出一个异常。
+maxIdleBackup:当有多少个空闲的Session时才开始备份。默认为-1,即不备份。
+saveOnRestart：是否在重新启动应用时备份，默认为true值。
+sessionMaxAliveTime：?
+
+className：Session的管理类，tomcat将会通过定义的接口来应用该类生成的对象。
+debug：Session管理器的跟踪级别。
+saveOnRestart:(true/false）配置服务重启工程中对session的处理，若为true，则关闭前把有效的session保存，启动后重新载入
+maxActiveSession：活动状态Session的最大数，为-1时则不限制，否则Session Manager将会把超出的Session对象转移到Session Store中。
+minIdleSwap：Session不活动的最短时间，超过该时间，Session Manager 可能会把该Session对象转移到Session Store中，单位为秒。
+maxidleSwap：Session不活动的最长时间，超过该时间，Session Manager 将会把该Session对象转移到Session Store中，该Session将不在内存中。
+maxidleBackup: Session不活动的最长时间，超过该时间，Session Manager 将会把该Session对象备份到Session Store中，但该Session对象依然存在内存中。
+<Store>指定实现持久化的类和Session存放的文件位置，如该例子中指定的类 是：org.apache.catalina.session.FileStore，而Session对象存放的目录则是tomcat根目录下的 session文件夹（当然自己创建）
+
+
+ -->
